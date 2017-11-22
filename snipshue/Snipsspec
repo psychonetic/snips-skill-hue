@@ -1,25 +1,33 @@
 package_name: snipshue
 class_name: SnipsHue
 description: Philips Hue skill for Snips
-parameters: ["hostname", "username", "light_ids"]
+parameters: ["hostname", "username"]
 intents:
-  - intent: lightsTurnOff_EN
-    action: >
+  - intent: lightsTurnOff
+    action: |
       {%
+      print ("----->off")
+      print ("----->off")
       skill.light_off(intent.house_room_EN)
       %}
-  - intent: lightsTurnOnSet_EN
-    action: >
+  - intent: lightsTurnOnSet
+    action: |
       {%
+      print ("----->OnSet")
+      print ("----->OnSet")
       skill.light_on_set("white", intent.number, intent.house_room_EN)
       %}
-  - intent: lightsTurnDown_EN
-    action: >
+  - intent: lightsTurnDown
+    action: |
       {%
+      print ("----->Down")
+      print ("----->Down")
       skill.light_down(intent.house_room_EN)
       %}
-  - intent: lightsTurnUp_EN
-    action: >
+  - intent: lightsTurnUp
+    action: |
       {%
+      print ("----->Up")
+      print ("----->Up")
       skill.light_up(intent.house_room_EN)
       %}
