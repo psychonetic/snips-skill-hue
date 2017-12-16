@@ -16,7 +16,7 @@ class SnipsHue:
 
     colormap = colors
 
-    def __init__(self, hostname=None, username=None, locale=None):
+    def __init__(self, hostname=None, username=None):
         """ Initialisation.
 
         :param hostname: Philips Hue hostname
